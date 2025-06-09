@@ -1,9 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Link } from 'expo-router';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>HomePage Screen</Text>
+			<Link
+				href={'/profile'}
+				asChild>
+				<Button
+					title="Go to Profile"
+					color="#007BFF"
+				/>
+			</Link>
 		</View>
 	);
 }
