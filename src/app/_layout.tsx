@@ -5,9 +5,11 @@ export default function RootLayout() {
 	const isUserLoggedIn = true; // Simulate user login state
 	return (
 		<Tabs
+			backBehavior="order"
 			screenOptions={{
 				tabBarActiveTintColor: 'green',
 				tabBarInactiveTintColor: 'purple',
+				popToTopOnBlur: true,
 				// tabBarShowLabel: false,
 			}}>
 			<Tabs.Screen
@@ -53,6 +55,7 @@ export default function RootLayout() {
 					title: 'Profile',
 					tabBarActiveTintColor: 'blue',
 					tabBarInactiveTintColor: 'gray',
+					headerShown: false,
 					// tabBarShowLabel: false,
 					tabBarIcon({ color, size }) {
 						return (
