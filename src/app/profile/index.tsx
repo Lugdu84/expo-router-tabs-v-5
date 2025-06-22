@@ -15,6 +15,16 @@ export default function ProfileScreen() {
 				title="Back"
 				onPress={() => router.back()}
 			/>
+			<Link
+				href={'/profile/modal'}
+				asChild>
+				<Button title="Open Modal" />
+			</Link>
+			<Link
+				href={'/profile/modal-with-stack'}
+				asChild>
+				<Button title="Open Modal with Stack" />
+			</Link>
 		</View>
 	);
 }
